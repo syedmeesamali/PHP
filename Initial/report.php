@@ -1,6 +1,20 @@
- <?php
- $name = $_GET['firstname'];
+<html>
+<head>
+<title>Report an alien abduction</title>
+</head>
+<body>
  
- echo 'Thanks for submitting form'
- echo 'Name is: '.$name
+<?php
+ $whenithappened = $_POST['whenithappened'];
+ $fang_spotted = $_POST['fangspotted'];
+ $email = $_POST['email'];
+ 
+ echo 'Thanks for submitting form <br />';
+ echo 'Was fang spotted?  <br />'.$fang_spotted;
+ echo 'Your email address is:  <br />'.$email;
 ?>
+
+</body>
+
+</html>
+

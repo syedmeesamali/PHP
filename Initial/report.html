@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <title>Main Page</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"><h1>Aliens Abducted me - Report an Alien Abduction !</h1></nav>
 <form action="report.php" method="POST">
     <label for="firstname">First Name:</label>
     <input type="text" id="firstname" name="firstname" /><br>
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" /><br>
+    <label for="email">Your email address?</label>
+    <input type="text" id="email" name="email" /><br>
+    <label for="whenithappened">When it happened?</label>
+    <input type="text" id="whenithappened" name="whenithappened" /><br>
+    <label for="fangspotted">Have you seen my dog Fang?</label>
+    Yes <input id="fangspotted" name="fangspotted" type="radio" value="yes" />
+    No <input id="fangspotted" name="fangspotted" type="radio" value="no" /><br />
+    <img src="fang.png" width="150" height="175"
+    alt="My abducted dog Fang." /><br />
+    <label for="other">Anything else you want to add?</label>
+    <textarea id="other" name="other"></textarea><br />
+    <input type="submit" value="Report Abduction" name="submit" />
 
 </form>
 </body>
