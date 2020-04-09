@@ -8,8 +8,10 @@
  $first_name = $_POST['firstname'];
  $last_name = $_POST['lastname'];
  $whenithappened = $_POST['whenithappened'];
- $other = $_POST['other'];
+ $how_long = $_POST['howlong'];
+ $how_many = $_POST['howmany'];
  $fang_spotted = $_POST['fangspotted'];
+ $other = $_POST['other'];
  $email = $_POST['email'];
 
  //Below portion is related to the upload of provided data to database 
@@ -18,7 +20,7 @@ or die('Error connecting to MySql database.');
 
 $query = "INSERT INTO alienabduction (first_name, last_name, when_it, how_long, description,".
 "what_did, spotted, other, email) VALUES ('$first_name', '$last_name', '$whenithappened', ".
-"'crazy aliens', 'what did', '$fang_spotted', '$other', '$email')";
+"'$how_long', '$how_many','$other', '$fang_spotted', '$other', '$email')";
 
 $result = mysqli_query($dbc, $query)
 or die('Error querying the database.');
