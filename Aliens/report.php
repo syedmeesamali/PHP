@@ -5,22 +5,31 @@
 <body>
  
 <?php
+ $first_name = $_POST['firstname'];
+ $last_name = $_POST['lastname'];
  $whenithappened = $_POST['whenithappened'];
  $other = $_POST['other'];
  $fang_spotted = $_POST['fangspotted'];
  $email = $_POST['email'];
 
- $to = 'meeghou8689@gmail.com';
- $subject = 'Aliens abducted me!!';
- $msg = "Hello my name is ali and my dog name is fang. \n"."The incident happened $whenithappened\n"."Was
- my fang spotted? The answer is $fang_spotted\n"."Some other information is as below:\n"." Other info: 
-    $other";
+ //Below portion is related to the upload of provided data to database 
+$dbc = mysqli_connect('localhost', 'root', '', 'main_db') 
+or die('Error connecting to MySql database.');
 
- mail($to, $subject, $msg, 'From: '.$email);
- echo 'Thanks for submitting form <br />';
- echo 'Was fang spotted?  <br />'.$fang_spotted;
- echo '<br />Your email address is:  <br />'.$email;
- echo '<br />An email report also sent to your provided email id:  <br />'.$email;
+$query = "INSERT INTO alienabduction (first_name, last_name, when_it, how_long, description,".
+"what_did, spotted, other, email) VALUES ('$first_name', '$last_name', '$whenithappened', ".
+"'crazy aliens', 'what did', '$fang_spotted', '$other', '$email')";
+
+$result = mysqli_query($dbc, $query)
+or die('Error querying the database.');
+
+mysqli_close($dbc);
+echo 'Successfully database updated!';
+
+echo 'Thanks for submitting form <br />';
+echo 'Was fang spotted?  <br />'.$fang_spotted;
+echo '<br />Your email address is:  <br />'.$email;
+echo '<br />An email report also sent to your provided email id:  <br />'.$email;
 ?>
 
 </body>
