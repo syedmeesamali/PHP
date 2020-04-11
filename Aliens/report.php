@@ -32,6 +32,7 @@ echo 'Thanks for submitting form <br />';
 echo 'Was fang spotted?  <br />'.$fang_spotted;
 echo '<br />Your email address is:  <br />'.$email;
 echo '<br />An email report also sent to your provided email id:  <br />'.$email;
+
 ?>
 
 </body>
