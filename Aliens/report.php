@@ -32,9 +32,6 @@ echo 'Thanks for submitting form <br />';
 echo 'Was fang spotted?  <br />'.$fang_spotted;
 echo '<br />Your email address is:  <br />'.$email;
 echo '<br />An email report also sent to your provided email id:  <br />'.$email;
-<<<<<<< HEAD
-
-=======
 $dbc = mysqli_connect('localhost', 'root', '', 'main_db') 
 or die('Error connecting to MySql database.');
 $query2 = "SELECT * FROM alienabduction WHERE spotted = 'YES'";
@@ -42,7 +39,6 @@ $result2 = mysqli_query($dbc, $query2)
 echo "Result. <br />".$result2;
 or die('Error querying the database.');
 mysqli_close($dbc);
->>>>>>> 09549c354a679ab53bbb27eb6c6a5534c937d1b9
 ?>
 
 </body>
