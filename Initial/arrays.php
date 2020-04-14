@@ -8,8 +8,8 @@
  'ali'=>array('Age'=>24, 'Hair'=>'Blonde'), 
  'ahmed'=>array('Age'=>29, 'Hair'=>'Black'), 
  'shah'=>array('Age'=>34, 'Hair'=>'Brown'));
- echo $names['shah']['Age']
- 
+ print_r($names);
+ echo '<pre>', print_r($names, true), '</pre>';
  ?> 
  </body>
 </html>
