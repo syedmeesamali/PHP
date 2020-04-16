@@ -3,9 +3,13 @@
   <title>main index file</title>
  </head>
  <body>
-<form action="process.php" method="GET">
-<input type="checkbox" name="agree" />I accept the terms and conditions! <br>
-<input type="submit" value="Register" />
+<form action="process.php" method="POST">
+    <p>
+    <input type="radio" name="language" value="PHP" /> PHP<br />
+    <input type="radio" name="language" value="CSharp" />CSharp <br />
+    <input type="radio" name="language" value="C" /> C/C++<br />
+    </p>
+    <input type="submit" value="SUBMIT" />
 </form>
 <?php
 
