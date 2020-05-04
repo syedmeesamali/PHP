@@ -1,6 +1,14 @@
 <?php
+
 class Product {
+
     public $type;
+    
+    public function __construct($value) //Constructor function
+    {
+        $this -> type = $value;
+    }
+
     public function setProductType($value)
     {
         $this -> type = $value;
@@ -9,5 +17,6 @@ class Product {
     {
         return $this -> type;
     }
-}
+}//End of class
+
 ?>
