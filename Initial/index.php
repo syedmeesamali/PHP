@@ -1,18 +1,21 @@
 <html>
  <head>
   <title>main index file</title>
+<style>
+body {
+    background-color: rgb(72,72,72);
+    color: yellow;
+}
+</style>
  </head>
  <body>
-<form action="process.php" method="POST">
-    <p>
-    <input type="radio" name="language" value="PHP" /> PHP<br />
-    <input type="radio" name="language" value="CSharp" />CSharp <br />
-    <input type="radio" name="language" value="C" /> C/C++<br />
-    </p>
-    <input type="submit" value="SUBMIT" />
-</form>
+<h1> some text in the page </h1>
 <?php
-
+require_once '../Classes/Product.php';
+$food = new Product();
+$food -> setProductType('Special Food');
+#echo $food -> type;
+echo 'The food type is: ', $food->getProductType();
 ?>
  </body>
 </html>
