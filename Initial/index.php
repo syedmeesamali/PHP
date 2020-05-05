@@ -1,8 +1,10 @@
 <?php
 require_once '../Classes/Product.php';
-$book = new Product('Books', 25);
+require_once '../Classes/Book.php';
+
+$book = new Book(8.99);
 echo '<br> Book type is: ', $book -> getProductType();
 echo '<br> Book price is: ', $book -> getProductPrice();
-//Here the property is instantiated even without explicity specifying it.
+echo '<br> Book VAT is: ', $book -> calculateProductVAT();
 
 ?>
