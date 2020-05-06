@@ -4,15 +4,10 @@ class Product {
 
     public $type;
     protected $_price;
-    //Constructor function
-    /*
-    public function __construct($value, $price) {
-        $this -> type = $value;
-        $this -> _price = $price;
-    } */
     
+    const VAT = 0.20;
     public function calculateProductVAT() {
-        return $this -> _price * 0.20;
+        return $this -> _price * self::VAT;
     }
 
     //Get type
