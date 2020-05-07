@@ -1,10 +1,9 @@
 <?php
-require_once '../Classes/Product.php';
-require_once '../Classes/Book.php';
+require_once '../Classes/Count.php';
+$counter = new Count();
+echo '<br> Counter is now: '.$counter -> getCount();
 
-$book = new Book(8.99);
-echo '<br> Book type is: ', $book -> getProductType();
-echo '<br> Book price is: ', $book -> getProductPrice();
-echo '<br> Book VAT is: ', $book -> calculateProductVAT();
+$counter2 = new Count();
+echo '<br> Counter is now: '.$counter2 -> getCount();
 
 ?>
