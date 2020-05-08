@@ -1,9 +1,8 @@
 <?php
-require_once '../Classes/Count.php';
-$counter = new Count();
-echo '<br> Counter is now: '.$counter -> getCount();
+require_once '../Classes/Calculator.php';
 
-$counter2 = new Count();
-echo '<br> Counter is now: '.$counter2 -> getCount();
+$calc = new Calculator();
+$calc -> add(35);
+echo "Total now is: ".$calc -> getTotal();
 
 ?>
