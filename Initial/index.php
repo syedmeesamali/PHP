@@ -1,8 +1,10 @@
 <?php
-require_once '../Classes/Calculator.php';
+require_once '../Classes/Database.php';
 
-$calc = new Calculator();
-$calc -> add(35);
-echo "Total now is: ".$calc -> getTotal();
+$db = new Database('localhost', 'root', '', 'main_db');
+$db -> query("SELECT * FROM alienabduction");
+echo $db -> numRows();
+
+$db -> disconnect();
 
 ?>
