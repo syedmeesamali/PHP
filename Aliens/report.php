@@ -2,8 +2,7 @@
 <head>
 <title>Report an alien abduction</title>
 </head>
-<body>
- 
+<body> 
 <?php
  $first_name = $_POST['firstname'];
  $last_name = $_POST['lastname'];
@@ -35,10 +34,9 @@ echo '<br />An email report also sent to your provided email id:  <br />'.$email
 $dbc = mysqli_connect('localhost', 'root', '', 'main_db') 
 or die('Error connecting to MySql database.');
 $query2 = "SELECT * FROM alienabduction WHERE spotted = 'YES'";
-$result2 = mysqli_query($dbc, $query2)
-echo "Result. <br />".$result2;
-or die('Error querying the database.');
+$result2 = mysqli_query($dbc, $query2);
 mysqli_close($dbc);
+
 ?>
 
 </body>

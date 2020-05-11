@@ -19,8 +19,18 @@ class Database {
         $this -> _numRows = mysqli_num_rows($this -> _result);
     }
 
+    //Number of rows in the result of query
     public function numRows() {
         return $this -> _numRows;
+    }
+
+    //Actual result data from te
+    public function Rows() {
+        $rows = array();
+        for ($x =0; $x < $this -> numRows(); $x++) {
+            $rows[] = mysqli_fetch_assoc($this->_result);
+        }
+        return $rows;
     }
 }
 ?>
